@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Tables</title>
+
+	<!-- jQuery -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="css/extraStyle.css">
+
+</head>
+<body>
+
+
+<div class= >
+	<div class="container col-xs-12 col-sm-4 col-sm-offset-4">
+
+	<h1>Tables<br><small>Select which table you want to review</small></h1>
+	<hr>
+
+	<select id="cmbBase" class="form-control">
+		<option value="1">1</option>
+		<option value="2" selected>2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+	</select>
+	<br>
+
+
+	<button class="btn">Add a line</button>
+	<br><br>
+
+
+	<table class="table">
+		<tr>
+			<th>Base</th>
+			<th>x</th>
+			<th>Number</th>
+			<th>=</th>
+			<th>Result</th>
+		</tr>
+	</table>
+
+
+</div>
+</div>
+
+
+
+<script>
+
+(function(){
+
+	var count = 0;
+
+
+	$("button").on("click",function(){
+
+		count ++;
+
+		var base = $("#cmbBase").val();
+
+
+		var line = "";
+
+		line += '<tr>';
+		line += 	'<td>'+ base +'</td>';
+		line += 	'<td>x</td>';
+		line += 	'<td>'+ count +'</td>';
+		line += 	'<td>=</td>';
+		line += 	'<td>'+ ( count * base ) +'</td>';
+		line += '</tr>';
+
+		$("table").append( line );
+
+	});
+
+
+	// Function to detect change on base
+	$("#cmbBase").on("change",function(){
+
+		$("tr").not(":eq(0)").remove();
+		count = 0;
+
+	});
+
+
+})();
+
+
+
+
+</script>
+
+</body>
+</html>

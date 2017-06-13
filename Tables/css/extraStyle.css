@@ -1,0 +1,37 @@
+body {
+  background-color: #8B23FF;
+  background-color: -webkit-linear-gradient(#8B23FF, #E80CE5);
+  background-color: -o-linear-gradient(#8B23FF, #E80CE5);
+  background-color: -moz-linear-gradient(#8B23FF, #E80CE5);
+  background-color: linear-gradient(#8B23FF, #E80CE5);
+  max-height: 600px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400; }
+
+.container {
+  background-color: black;
+  border-radius: 10px;
+  margin-top: 70px; }
+
+h1 {
+  font-weight: 700;
+  font-family: "Amatic SC", cursive; }
+
+small {
+  color: white; }
+
+.form-control {
+  background-color: black;
+  font-weight: bold; }
+
+.btn {
+  background-color: #E80CE5; }
+  .btn:hover {
+    color: white;
+    background-color: #D60BBA; }
+
+.table {
+  border-bottom: 1px solid; }
+
+/*# sourceMappingURL=extraStyle.css.map */
